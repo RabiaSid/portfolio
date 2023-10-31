@@ -1,15 +1,18 @@
-#root {
+/* #root {
   text-size-adjust: 100%;
   letter-spacing: normal;
   background-color: white;
   margin: 0 auto;
   padding: 0;
   width: 100%;
-}
+} */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 .customized-primary-btn {
+  min-width: 6vw;
   height: 5vh;
   padding: 2px 25px;
   color: #fff;
@@ -17,14 +20,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background:rgb(40, 217, 131,0.3);
+  background: rgb(40, 217, 131, 0.3);
   cursor: pointer;
   outline: none;
   border-radius: 20px;
   border: none;
 }
 .customized-primary-btn:focus {
-  background:rgb(40, 217, 131);
+  background: rgb(40, 217, 131);
 }
 .customized-anime-btn {
   height: 6vh;
@@ -43,7 +46,7 @@
 .Header-item {
   padding: 2px 25px !important;
   color: aliceblue !important;
-  font-size: 1.2rem  !important;
+  font-size: 1.2rem !important;
   font-weight: bold !important;
   letter-spacing: 0.2rem !important;
   text-decoration: none !important;
@@ -51,7 +54,7 @@
 .Header-item-2 {
   padding: 2px 25px !important;
   color: aliceblue !important;
-  font-size: 1.2rem  !important;
+  font-size: 1.2rem !important;
   font-weight: bold !important;
   letter-spacing: 0.2rem !important;
   text-decoration: none !important;
@@ -59,31 +62,62 @@
 .Header-item:hover {
   color: rgb(83, 84, 85) !important;
 }
-.ProfileImage{
+.ProfileImage {
   height: 60vh;
   border-radius: 50%;
+}
+.ColorChangeBox {
+  border-radius: 5px;
 }
 .Heading-white-xxl {
   font-size: calc(40px + 6 * ((100vw - 320px) / 680));
   font-weight: bolder;
   line-height: 5.5rem;
-  color:white
+  color: white;
+}
+.Heading-white-xl {
+  font-size: calc(30px + 6 * ((100vw - 320px) / 680));
+  font-weight: bolder;
+  /* line-height: 5.5rem; */
+  color: white;
 }
 .Heading-white-lg {
   font-size: calc(20px + 6 * ((100vw - 320px) / 680));
   font-weight: bolder;
-  color:white
+  color: white;
+}
+.Heading-white-md {
+  font-size: calc(15px + 6 * ((100vw - 320px) / 680));
+  font-weight: bolder;
+  color: white;
+}
+.Heading-secondary-md {
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  font-weight: bolder;
+  font-style: italic;
+  color: #323232;
+}
+
+.Heading-dark-xxl {
+  font-size: calc(40px + 6 * ((100vw - 320px) / 680));
+  font-weight: bolder;
+  line-height: 5.5rem;
+  color: #000;
 }
 .Heading-Primary-xxl {
   font-size: calc(40px + 6 * ((100vw - 320px) / 680));
   font-weight: bolder;
   line-height: 5.5rem;
-  color:#28d983
+  color: #28d983;
 }
 .Text-1 {
-  
 }
-.primary-Hover-text:hover{
-  color:#28d983
+.Text-secondary-md {
+  font-size: 16px;
+  font-weight: bolder;
+  font-style: italic;
+  color: #323232;
 }
-
+.primary-Hover-text:hover {
+  color: #28d983;
+}

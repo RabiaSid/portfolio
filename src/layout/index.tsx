@@ -31,9 +31,13 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           background: `url(${AppBackground})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          backgroundPosition:"center",
           width: "auto",
           height: "100vh",
-          overflowY: "hidden"
+          // overflowY: "hidden",
+          margin:0,
+          padding:0,
+          border:"1px solid brown"
         }}
       >
         <Header
@@ -64,14 +68,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           {/* )} */}
         </Content>
 
-        <Footer
-          style={{
-            margin: 0,
-            padding: 0
-          }}
-        >
-          {/* <AppFooter /> */}
-        </Footer>
+        
       </Layout>
     </>
   );

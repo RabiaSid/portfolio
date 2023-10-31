@@ -1,3 +1,4 @@
+import { useState } from "react";
 import React, { useEffect, useRef } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -7,8 +8,10 @@ import { Logo } from "../../assets";
 import { Link, useNavigate } from "react-router-dom";
 import PrimaryButton from "../button/primary-button";
 import AnimeButton from "../button/anime-button";
+import Button from "react-bootstrap/Button";
 
 function AppHeader() {
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const imgRef = useRef(null);
 
@@ -22,16 +25,18 @@ function AppHeader() {
     return () => clearTimeout(timeout);
   }, []);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
-      {["sm"].map((expand, index) => (
-        <Navbar
-          key={`navbar-${expand}-${index}`}
-          expand={expand as any}
-          className=" mb-3 row p-0 m-0 "
-          style={{ height: "auto", maxHeight: "9vh" }}
-        >
-          <Container fluid>
+      <Navbar
+        className=" mb-3 row p-0 m-0 d-flex align-items-center justify-content-between"
+        style={{ height: "auto", maxHeight: "9vh" }}
+      >
+        {/* <Container fluid> */}
+        <div className="row m-0 p-0 d-flex align-items-center justify-content-center">
+          <div className="col-8 col-md-4 col-lg-3 border border-success">
             <Navbar.Brand
               href="#"
               className="row m-0 p-0 d-flex align-items-center"
@@ -43,31 +48,77 @@ function AppHeader() {
                   ref={imgRef}
                 />
               </div>
-              <div className="col-2">
+              <div className="col-10">
                 <h1 className="Heading-white-lg">Rabia Azhar</h1>
               </div>
             </Navbar.Brand>
-            <Navbar.Toggle
-              // className="border border-none"
-              //   aria-controls={`offcanvasNavbar-expand-${expand}-${index}`}
-              style={{ outline: "none !important" }}
-            >
-              Swipe
-            </Navbar.Toggle>
-            <Navbar.Offcanvas
-              id={`offcanvasNavbar-expand-${expand}-${index}`}
-              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}-${index}`}
-              placement="end"
-              style={{ width: "15%", background: "rgb(38, 38, 38,0.5)" }}
-            >
-              <Offcanvas.Header closeButton className="border border-none">
-                <Offcanvas.Title
-                  id={`offcanvasNavbarLabel-expand-${expand}-${index}`}
+          </div>
+          <div className="col-md-8 col-lg-9 border border-success d-none d-md-block">
+            <Nav className="justify-content-end flex-grow-1 pe-3 align-items-center">
+              <Nav.Link>
+                <Link className="Header-item" to="/">
+                  Home
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="Header-item" to="/work">
+                  Work
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="Header-item" to="/tool">
+                  Tools
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link className="Header-item" to="/about">
+                  About
+                </Link>
+              </Nav.Link>
+              <Nav.Link className="d-none d-lg-block">
+                <AnimeButton
+                  title="Let's Talk"
+                  className="Header-item-2"
+                  onClick={() => navigate("/contact")}
+                  // to=""
                 >
-                  <img
-                    src={Logo as any}
-                    style={{ width: "auto", height: "5vh" }}
-                  />
+                  <Link
+                    className="d-none d-md-block border-none Header-item"
+                    // onClick={() => navigate('/become-a-member')}
+                    to="/contact"
+                  ></Link>
+                </AnimeButton>
+              </Nav.Link>
+            </Nav>
+          </div>
+          <div className="col border border-success d-block d-md-none text-end">
+            <Button variant="primary" onClick={handleShow}>
+              Launch
+            </Button>
+
+            <Offcanvas
+              show={show}
+              onHide={handleClose}
+              placement="end"
+              style={{ width: "auto", background: "rgb(38, 38, 38,0.9)" }}
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>
+                  <Navbar.Brand
+                    href="#"
+                    className="row m-0 p-0 d-flex align-items-center"
+                  >
+                    <div className="col-2">
+                      <img
+                        src={Logo as any}
+                        style={{ width: "auto", height: "5vh" }}
+                        ref={imgRef}
+                      />
+                    </div>
+                    <div className="col-10">
+                      <h1 className="Heading-white-lg">Rabia Azhar</h1>
+                    </div>
+                  </Navbar.Brand>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -84,15 +135,15 @@ function AppHeader() {
                   </Nav.Link>
                   <Nav.Link>
                     <Link className="Header-item" to="/tool">
-                    Tools
+                      Tools
                     </Link>
                   </Nav.Link>
                   <Nav.Link>
                     <Link className="Header-item" to="/about">
-                    About
+                      About
                     </Link>
                   </Nav.Link>
-                  <Nav.Link>
+                  <Nav.Link className="">
                     <AnimeButton
                       title="Let's Talk"
                       className="Header-item-2"
@@ -108,10 +159,11 @@ function AppHeader() {
                   </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
-        </Navbar>
-      ))}
+            </Offcanvas>
+          </div>
+        </div>
+        {/* </Container> */}
+      </Navbar>
     </>
   );
 }
