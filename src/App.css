@@ -69,6 +69,9 @@
 .ColorChangeBox {
   border-radius: 5px;
 }
+/* .width-toolcard{
+  width: 250px;
+} */
 .Heading-white-xxl {
   font-size: calc(40px + 6 * ((100vw - 320px) / 680));
   font-weight: bolder;

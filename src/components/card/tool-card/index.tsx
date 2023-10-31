@@ -1,9 +1,12 @@
 import React, { useState, useEffect, ReactNode } from "react";
 import BoxAnime from "../../anime/Box-anime";
-import {FaReact} from "react-icons/fa"
+import { FaReact } from "react-icons/fa";
+import { ClassNames } from "@emotion/react";
 
 type ToolCardProps = {
   id?: number;
+  className?: any;
+  width?: any;
   icon?: ReactNode;
   iconSize?: number;
   desc?: string;
@@ -12,7 +15,7 @@ type ToolCardProps = {
 };
 
 export default function ToolCard(props: ToolCardProps) {
-  const { id, icon, iconSize, desc, title, iconColor } = props;
+  const { id, className, icon, iconSize, desc, title, iconColor,width } = props;
   const colors = [
     "linear-gradient(135deg, rgba(19, 19, 19) 0%, rgba(33, 33, 33) 100%)",
     "linear-gradient(135deg, rgba(33, 33, 33) 0%, rgba(19, 19, 19) 100%)",
@@ -33,17 +36,24 @@ export default function ToolCard(props: ToolCardProps) {
   }, [currentColorIndex]);
 
   return (
-    <div className="col col-sm-6 col-md-3" key={id}>
+    <div className={className} key={id} style={{ minHeight: "22vh", width:width}}>
       <BoxAnime
         className="ColorChangeBox"
         Boxbackground={colors[currentColorIndex]}
       >
         <div className="row m-0 p-0">
-        <div className="col-11 text-center " style={{color:iconColor, fontSize:iconSize}}>
-       {icon ? icon : "icon"}
-        </div>
-        <div className="col-11 text-center"><h3 className="Heading-white-md">{title}</h3></div>
-        <div className="col-11 text-center"><h3 className="Text-secondary-md">{desc}</h3></div>
+          <div
+            className="col-11 text-center "
+            style={{ color: iconColor, fontSize: iconSize }}
+          >
+            {icon ? icon : "icon"}
+          </div>
+          <div className="col-11 text-center">
+            <h3 className="Heading-white-md">{title}</h3>
+          </div>
+          <div className="col-11 text-center">
+            <h3 className="Text-secondary-md">{desc}</h3>
+          </div>
         </div>
       </BoxAnime>
     </div>

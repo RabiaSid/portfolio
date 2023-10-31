@@ -36,7 +36,7 @@ function AppHeader() {
       >
         {/* <Container fluid> */}
         <div className="row m-0 p-0 d-flex align-items-center justify-content-center">
-          <div className="col-8 col-md-4 col-lg-3 border border-success">
+          <div className="col-8 col-md-4 col-lg-3 ">
             <Navbar.Brand
               href="#"
               className="row m-0 p-0 d-flex align-items-center"
@@ -53,7 +53,7 @@ function AppHeader() {
               </div>
             </Navbar.Brand>
           </div>
-          <div className="col-md-8 col-lg-9 border border-success d-none d-md-block">
+          <div className="col-md-8 col-lg-9 d-none d-md-block">
             <Nav className="justify-content-end flex-grow-1 pe-3 align-items-center">
               <Nav.Link>
                 <Link className="Header-item" to="/">
@@ -91,7 +91,7 @@ function AppHeader() {
               </Nav.Link>
             </Nav>
           </div>
-          <div className="col border border-success d-block d-md-none text-end">
+          <div className="col d-block d-md-none text-end">
             <Button variant="primary" onClick={handleShow}>
               Launch
             </Button>
