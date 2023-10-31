@@ -5,8 +5,85 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  /* height: auto; */
 }
 * {
   box-sizing: border-box;
 }
+.customized-primary-btn {
+  height: 5vh;
+  padding: 2px 25px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background:rgb(40, 217, 131,0.3);
+  cursor: pointer;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+}
+.customized-primary-btn:focus {
+  background:rgb(40, 217, 131);
+}
+.customized-anime-btn {
+  height: 6vh;
+  padding: 2px 25px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #323232;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+}
+.Header-item {
+  padding: 2px 25px !important;
+  color: aliceblue !important;
+  font-size: 1.2rem  !important;
+  font-weight: bold !important;
+  letter-spacing: 0.2rem !important;
+  text-decoration: none !important;
+}
+.Header-item-2 {
+  padding: 2px 25px !important;
+  color: aliceblue !important;
+  font-size: 1.2rem  !important;
+  font-weight: bold !important;
+  letter-spacing: 0.2rem !important;
+  text-decoration: none !important;
+}
+.Header-item:hover {
+  color: rgb(83, 84, 85) !important;
+}
+.ProfileImage{
+  height: 60vh;
+  border-radius: 50%;
+}
+.Heading-white-xxl {
+  font-size: calc(40px + 6 * ((100vw - 320px) / 680));
+  font-weight: bolder;
+  line-height: 5.5rem;
+  color:white
+}
+.Heading-white-lg {
+  font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+  font-weight: bolder;
+  color:white
+}
+.Heading-Primary-xxl {
+  font-size: calc(40px + 6 * ((100vw - 320px) / 680));
+  font-weight: bolder;
+  line-height: 5.5rem;
+  color:#28d983
+}
+.Text-1 {
+  
+}
+.primary-Hover-text:hover{
+  color:#28d983
+}
+

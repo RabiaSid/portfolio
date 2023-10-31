@@ -4,8 +4,12 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Logo } from "../../assets";
+import { Link, useNavigate } from "react-router-dom";
+import PrimaryButton from "../button/primary-button";
+import AnimeButton from "../button/anime-button";
 
 function AppHeader() {
+  const navigate = useNavigate();
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -13,7 +17,7 @@ function AppHeader() {
       if (imgRef.current) {
         console.log("Image reference after 10 milliseconds:", imgRef.current);
       }
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -24,39 +28,84 @@ function AppHeader() {
         <Navbar
           key={`navbar-${expand}-${index}`}
           expand={expand as any}
-          className="border border-success mb-3 row p-0 m-0 "
-          style={{ height: "auto", maxHeight:"9vh"}}
+          className=" mb-3 row p-0 m-0 "
+          style={{ height: "auto", maxHeight: "9vh" }}
         >
-          <Container fluid >
-            <Navbar.Brand href="#">
-              <img
-                src={Logo as any}
-                style={{ width: "auto", height: "5vh" }}
-                ref={imgRef}
-              />
+          <Container fluid>
+            <Navbar.Brand
+              href="#"
+              className="row m-0 p-0 d-flex align-items-center"
+            >
+              <div className="col-2">
+                <img
+                  src={Logo as any}
+                  style={{ width: "auto", height: "5vh" }}
+                  ref={imgRef}
+                />
+              </div>
+              <div className="col-2">
+                <h1 className="Heading-white-lg">Rabia Azhar</h1>
+              </div>
             </Navbar.Brand>
             <Navbar.Toggle
-            // className="border border-none"
-            //   aria-controls={`offcanvasNavbar-expand-${expand}-${index}`}
-            style={{outline:"none !important"}}
-            >Swipe</Navbar.Toggle>
+              // className="border border-none"
+              //   aria-controls={`offcanvasNavbar-expand-${expand}-${index}`}
+              style={{ outline: "none !important" }}
+            >
+              Swipe
+            </Navbar.Toggle>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}-${index}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}-${index}`}
               placement="end"
-              style={{width:"15%", background:"rgb(38, 38, 38,0.5)"}}
+              style={{ width: "15%", background: "rgb(38, 38, 38,0.5)" }}
             >
               <Offcanvas.Header closeButton className="border border-none">
                 <Offcanvas.Title
                   id={`offcanvasNavbarLabel-expand-${expand}-${index}`}
                 >
-                  <img src={Logo as any} style={{ width: "auto", height: "5vh" }}/>
+                  <img
+                    src={Logo as any}
+                    style={{ width: "auto", height: "5vh" }}
+                  />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
+                <Nav className="justify-content-end flex-grow-1 pe-3 align-items-center">
+                  <Nav.Link>
+                    <Link className="Header-item" to="/">
+                      Home
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link className="Header-item" to="/work">
+                      Work
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link className="Header-item" to="/tool">
+                    Tools
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <Link className="Header-item" to="/about">
+                    About
+                    </Link>
+                  </Nav.Link>
+                  <Nav.Link>
+                    <AnimeButton
+                      title="Let's Talk"
+                      className="Header-item-2"
+                      onClick={() => navigate("/contact")}
+                      // to=""
+                    >
+                      <Link
+                        className="d-none d-md-block border-none Header-item"
+                        // onClick={() => navigate('/become-a-member')}
+                        to="/contact"
+                      ></Link>
+                    </AnimeButton>
+                  </Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

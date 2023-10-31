@@ -1,5 +1,3 @@
-import React from "react";
-import Button from "../button";
 import InputField from "../input-field";
 
 type FormProps = {

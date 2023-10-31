@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Button from "../button";
 
 type CardProps = {
   onClick?: (...args: any[]) => any;
@@ -39,8 +38,8 @@ export default function CustomizedCard(props: CardProps) {
         <Typography variant="body2">{body}</Typography>
       </CardContent>
       <CardActions>
-        <Button color="primary" variant="outlined" label="Edit" onClick={onEditClick}/>
-        <Button color="primary" variant="outlined" label="Delete" onClick={onDeleteClick}/>
+        {/* <Button color="primary" variant="outlined" label="Edit" onClick={onEditClick}/>
+        <Button color="primary" variant="outlined" label="Delete" onClick={onDeleteClick}/> */}
       </CardActions>
     </Card>
   );
