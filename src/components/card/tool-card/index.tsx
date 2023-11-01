@@ -1,7 +1,5 @@
-import React, { useState, useEffect, ReactNode } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import BoxAnime from "../../anime/Box-anime";
-import { FaReact } from "react-icons/fa";
-import { ClassNames } from "@emotion/react";
 
 type ToolCardProps = {
   id?: number;
@@ -15,7 +13,8 @@ type ToolCardProps = {
 };
 
 export default function ToolCard(props: ToolCardProps) {
-  const { id, className, icon, iconSize, desc, title, iconColor,width } = props;
+  const { id, className, icon, iconSize, desc, title, iconColor, width } =
+    props;
   const colors = [
     "linear-gradient(135deg, rgba(19, 19, 19) 0%, rgba(33, 33, 33) 100%)",
     "linear-gradient(135deg, rgba(33, 33, 33) 0%, rgba(19, 19, 19) 100%)",
@@ -36,7 +35,11 @@ export default function ToolCard(props: ToolCardProps) {
   }, [currentColorIndex]);
 
   return (
-    <div className={className} key={id} style={{ minHeight: "22vh", width:width}}>
+    <div
+      className={className}
+      key={id}
+      style={{ minHeight: "22vh", width: width }}
+    >
       <BoxAnime
         className="ColorChangeBox"
         Boxbackground={colors[currentColorIndex]}

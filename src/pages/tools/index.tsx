@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import BoxAnime from "../../components/anime/Box-anime";
 import PrimaryButton from "../../components/button/primary-button";
 import ToolCard from "../../components/card/tool-card";

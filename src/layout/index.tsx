@@ -34,10 +34,10 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           backgroundPosition:"center",
           width: "auto",
           height: "100vh",
+          // opacity:0.9,
           // overflowY: "hidden",
           margin:0,
           padding:0,
-          border:"1px solid brown"
         }}
       >
         <Header
