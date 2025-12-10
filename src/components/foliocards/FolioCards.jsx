@@ -51,6 +51,7 @@ import web40 from 'media/thumbnils/web-40.webp'
 import web41 from 'media/thumbnils/web-41.webp'
 import web42 from 'media/thumbnils/web-42.webp'
 import web43 from 'media/thumbnils/web-43.webp'
+import web44 from 'media/thumbnils/web-44.webp'
 //==== Email Templates
 import template1 from 'media/thumbnils/template1.webp'
 import template2 from 'media/thumbnils/template2.webp'
@@ -246,6 +247,12 @@ const websites = [
 ]
 // ==============
 const reactnext = [
+    {
+        title: 'title',
+        path: web44,
+        url: 'https://aiproresume.com/',
+        tags: ['React.JS', 'Next.JS', 'Tailwind css'],
+    },
     {
         title: 'title',
         path: web29,
