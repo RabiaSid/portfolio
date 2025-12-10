@@ -68,7 +68,7 @@ const Contact = () => {
                                                 </div>
                                                 <div className='flex flex-col items-start'>
                                                     <p>Phone:</p>
-                                                    <p className="text-white font-normal">+92 316 2300835</p>
+                                                    <p className="text-white font-normal">+923162592884</p>
                                                 </div>
                                             </a>
                                             <a href="https://maps.app.goo.gl/mgGd26DMF3qw7bz66" target="_blank" className="flex items-center gap-5 md:gap-6">
