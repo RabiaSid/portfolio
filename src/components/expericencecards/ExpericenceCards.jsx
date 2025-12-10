@@ -3,47 +3,38 @@ import { motion } from 'framer-motion';
 
 //=====  Data
 const experience = [
-    {
-        title: 'Senior Front-End Developer',
-        company: 'Crystallite Digital Pvt, Karachi',
-        stage: '2023 - Current',
-        details: [
-            "Developed websites using Next.js for server-side rendering and static site generation, catering to sectors such as Web/Mobile Development and Video Animation services.",
-            "Integrated RESTful APIs and GraphQL for dynamic data handling and updates, enhancing responsiveness and engagement.",
-            "Mentored junior developers and led code reviews, promoting best practices and improving team productivity."
-        ]
-    },
-    {
-        title: 'Front-End Developer (Mid-Level)',
-        company: 'Crystallite Digital Pvt, Karachi',
-        stage: '2022 - 2023',
-        details: [
-            "Developed advanced UIs using React.js, Next.js, and static HTML websites, emphasizing reusability, scalability, and optimization.",
-            "Created websites for Real Estate, Hotel Management, SEO companies, eBook Publishers and Digital Marketing Agencies.",
-            "Implemented front-end development strategies, resulting in enhanced website performance and cross-browser compatibility."
-        ]
-    },
-    {
-        title: 'Junior Front-End Developer',
-        company: 'WebExperts, Karachi',
-        stage: '2021 - 2022',
-        details: [
-            "Created multiple responsive websites for mobile and desktop devices using HTML, CSS and JS as well as third-party libraries such as jQuery.",
-            "Developed websites for the Healthcare sector, including Hospitals and Pharmacies, as well as eCommerce Websites.",
-            "Tested and debugged code to ensure compatibility and stability, resolving website errors and improving functionality."
-        ]
-    },
-    {
-        title: 'Front-End Developer (Intern)',
-        company: 'ZM Global, Karachi',
-        stage: '2021 - 2021',
-        details: [
-            "Assisted in the creation and implementation of user interface components, enhancing user engagement and experience.",
-            "Worked with senior developers to integrate responsive design techniques, ensuring seamless performance across devices.",
-            "Assisted in the optimization of front-end assets, contributing to more efficient and faster-loading websites."
-        ]
-    },
+  {
+    title: 'Senior Front-End Developer',
+    company: 'Cognitive IT Solutions',
+    stage: 'Dec 2024 – Present | Karachi, Pakistan',
+    details: [
+      "Improved UI rendering speed by 30% and reduced layout shifts by 40%, enhancing overall user experience.",
+      "Built reusable React components and optimized API integrations for high performance.",
+      "Enhanced frontend architecture performance and scalability."
+    ]
+  },
+  {
+    title: 'Front-End Developer',
+    company: 'Crystallite Pvt Ltd',
+    stage: 'Apr 2024 – Nov 2024 | Karachi, Pakistan',
+    details: [
+      "Converted UI designs into pixel-perfect layouts while improving component performance.",
+      "Enhanced API request handling, delivering stable and responsive user experiences.",
+      "Developed advanced UIs using React.js, Next.js, emphasizing reusability and optimization."
+    ]
+  },
+  {
+    title: 'Front-End Developer',
+    company: 'Blakaces',
+    stage: 'Aug 2022 – Apr 2023 | Karachi, Pakistan',
+    details: [
+      "Developed frontend apps using React & JavaScript, delivering clean UI and smooth deployment cycles.",
+      "Created websites for Real Estate, Hotel Management, SEO companies, eBook Publishers, and Digital Marketing Agencies.",
+      "Tested, debugged, and optimized code to ensure compatibility and stability across browsers and devices."
+    ]
+  },
 ];
+
 
 const ExpericenceCards = ({ onMouseMove, style }) => {
     return (

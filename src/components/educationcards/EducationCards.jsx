@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 //=====  Data
 const educationData = [
     {
-        degree: (<> Bachelor of Science In <br /> Software Engineering </>),
-        institution: 'Indus University, Karachi',
-        years: '2018 - 2022',
+        degree: (<> Bachelor of Science In <br /> Computer Science </>),
+        institution: 'Newports Institute of Communications and Economics',
+        years: '2019 - 2023',
     },
     {
         degree: (<> Intermediate In <br /> Computer Science </>),
-        institution: 'Atta Shad Degree Collage, Quetta',
-        years: '2014 - 2016',
+        institution: 'Sindh Board of Technical Education',
+        years: '2016 - 2018',
     },
     {
-        degree: (<> Matriculation In <br /> Science </>),
-        institution: 'KGH High School, Quetta',
-        years: '2012 - 2014',
+        degree: (<> Matriculation In <br /> Computer Science </>),
+        institution: 'Board of Secondary Education Karachi',
+        years: '2014 - 2016',
     },
 ];
 

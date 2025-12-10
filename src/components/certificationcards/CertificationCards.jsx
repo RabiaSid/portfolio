@@ -4,54 +4,9 @@ import { motion } from 'framer-motion';
 //=====  Data
 const certification = [
     {
-        title: 'Advance Game Development',
-        company: 'NeXskill, Karachi',
-        stage: '2024',
-    },
-    {
-        title: 'JavaScript',
-        company: 'kandi.openweaver.com',
-        stage: '2022',
-    },
-    {
-        title: 'Html5 & Css3',
-        company: 'pirple.com',
-        stage: '2021',
-    },
-    {
-        title: 'Web & Mobile App Development',
-        company: 'Jawan Pakistan, Karachi',
-        stage: '2020',
-    },
-    {
-        title: 'WordPress',
-        company: 'Digiskills Training Program',
-        stage: '2020',
-    },
-    {
-        title: 'SEO (Search Engine Optimization)',
-        company: 'Digiskills Training Program',
-        stage: '2020',
-    },
-    {
-        title: 'Freelancing',
-        company: 'Digiskills Training Program',
-        stage: '2020',
-    },
-    {
-        title: 'Graphic Design',
-        company: 'Digiskills Training Program',
-        stage: '2020',
-    },
-    {
-        title: ' E-Commerce Management',
-        company: 'Digiskills Training Program',
-        stage: '2020',
-    },
-    {
-        title: 'Certified Information Technology',
-        company: 'Global Computer Institute',
-        stage: '2017',
+        title: 'Mern Stack Developer',
+        company: 'Jawan Pakistan',
+        stage: '2023',
     },
 ];
 
