@@ -26,7 +26,7 @@ const experience = [
   {
     title: 'Front-End Developer',
     company: 'Blakaces',
-    stage: 'Aug 2020 – Apr 2024 | Karachi, Pakistan',
+    stage: 'Aug 2021 – Mar 2024 | Karachi, Pakistan',
     details: [
       "Developed frontend apps using React & JavaScript, delivering clean UI and smooth deployment cycles.",
       "Created websites for Real Estate, Hotel Management, SEO companies, eBook Publishers, and Digital Marketing Agencies.",
